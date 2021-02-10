@@ -46,17 +46,22 @@ public class ApartmentComparator {
         List<Apartment> apartmentsList = new ArrayList<>();
         for (String string : list) {
             if (isImportantLine(string)) {
-                String modifiedString = modifyString(string);
-                String[] apartmentsInfo = trimArray(modifiedString.split("\t"));
-                int number = Integer.parseInt(apartmentsInfo[0]);
-                int level = Integer.parseInt(apartmentsInfo[1]);
-                double dimension = Double.parseDouble(apartmentsInfo[2]);
-                int numberOfRooms = Integer.parseInt(apartmentsInfo[3]);
-                int priceForM2 = Integer.parseInt(apartmentsInfo[5]);
-                int totalprice = Integer.parseInt(apartmentsInfo[6]);
-                boolean availability = apartmentsInfo[7].equals("Zarezerwowane");
-                Apartment apartment = new Apartment(number, level, dimension, numberOfRooms, priceForM2, totalprice, availability);
-                apartmentsList.add(apartment);
+                try {
+                    String modifiedString = modifyString(string);
+                    String[] apartmentsInfo = trimArray(modifiedString.split("\t"));
+                    int number = Integer.parseInt(apartmentsInfo[0]);
+                    int level = Integer.parseInt(apartmentsInfo[1]);
+                    double dimension = Double.parseDouble(apartmentsInfo[2]);
+                    int numberOfRooms = Integer.parseInt(apartmentsInfo[3]);
+                    int priceForM2 = Integer.parseInt(apartmentsInfo[5]);
+                    int totalprice = Integer.parseInt(apartmentsInfo[6]);
+                    boolean availability = apartmentsInfo[7].equals("Zarezerwowane");
+                    Apartment apartment = new Apartment(number, level, dimension, numberOfRooms, priceForM2, totalprice, availability);
+                    apartmentsList.add(apartment);
+                }catch (Exception e)
+                {
+                    System.out.println("Incorrect data type from source");
+                }
             }
 
         }
