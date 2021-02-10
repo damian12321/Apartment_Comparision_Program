@@ -1,0 +1,159 @@
+10.02.2021
+1	1	52,25 m2	1	- m2	9 800 z³	512 050 z³	Dodaj do notatnika	PDF		
+»
+2	1	36,19 m2	1	- m2	12 600 z³	455 994 z³	Dodaj do notatnika	PDF		
+»
+3	1	57,77 m2	3	- m2	11 600 z³	670 132 z³	Dodaj do notatnika	PDF		
+»
+4	1	53,72 m2	2	- m2	11 600 z³	623 152 z³	Dodaj do notatnika	PDF		
+»
+5	1	56,89 m2	2	- m2	11 600 z³	659 924 z³	Dodaj do notatnika	PDF		
+»
+6	1	64,10 m2	2	- m2	11 200 z³	717 920 z³	Dodaj do notatnika	PDF		
+»
+7	1	53,30 m2	1	- m2	11 600 z³	618 280 z³	Dodaj do notatnika	PDF		
+»
+8	2	75,84 m2	3	- m2	11 300 z³	856 992 z³	Dodaj do notatnika	PDF		
+»
+9	2	36,19 m2	1	- m2	12 800 z³	463 232 z³	Dodaj do notatnika	PDF		
+»
+11	2	46,67 m2	2	- m2	11 800 z³	550 706 z³	Zarezerwowane	PDF		
+»
+13	2	74,68 m2	3	- m2	13 700 z³	1 023 116 z³	Dodaj do notatnika	PDF		
+»
+14	3	75,84 m2	3	- m2	10 900 z³	826 656 z³	Dodaj do notatnika	PDF		
+»
+15	3	36,19 m2	1	- m2	12 800 z³	463 232 z³	Zarezerwowane	PDF		
+»
+18	3	36,23 m2	1	- m2	12 800 z³	463 744 z³	Zarezerwowane	PDF		
+»
+20	4	75,84 m2	3	- m2	11 200 z³	849 408 z³	Dodaj do notatnika	PDF		
+»
+21	4	36,19 m2	1	- m2	13 000 z³	470 470 z³	Dodaj do notatnika	PDF		
+»
+23	4	46,67 m2	2	- m2	13 000 z³	606 710 z³	Zarezerwowane	PDF		
+»
+26	5	75,84 m2	3	- m2	11 200 z³	849 408 z³	Dodaj do notatnika	PDF		
+»
+28	5	57,77 m2	3	- m2	11 800 z³	681 686 z³	Dodaj do notatnika	PDF		
+»
+32	6	75,84 m2	3	- m2	11 200 z³	849 408 z³	Dodaj do notatnika	PDF		
+»
+33	6	36,19 m2	1	- m2	13 200 z³	477 708 z³	Dodaj do notatnika	PDF		
+»
+34	6	57,77 m2	3	- m2	12 000 z³	693 240 z³	Dodaj do notatnika	PDF		
+»
+38	7	75,84 m2	3	- m2	11 500 z³	872 160 z³	Dodaj do notatnika	PDF		
+»
+39	7	36,19 m2	1	- m2	13 400 z³	484 946 z³	Dodaj do notatnika	PDF		
+»
+40	7	57,77 m2	3	- m2	12 200 z³	704 794 z³	Dodaj do notatnika	PDF		
+»
+41	7	46,67 m2	2	- m2	13 400 z³	625 378 z³	Zarezerwowane	PDF		
+»
+44	8	75,84 m2	3	- m2	11 500 z³	872 160 z³	Dodaj do notatnika	PDF		
+»
+45	8	36,19 m2	1	- m2	13 600 z³	492 184 z³	Dodaj do notatnika	PDF		
+»
+46	8	57,77 m2	3	- m2	12 400 z³	716 348 z³	Dodaj do notatnika	PDF		
+»
+47	8	46,67 m2	2	- m2	13 600 z³	634 712 z³	Zarezerwowane	PDF		
+»
+48	8	36,23 m2	1	- m2	13 600 z³	492 728 z³	Dodaj do notatnika	PDF		
+»
+50	9	75,84 m2	3	- m2	11 700 z³	887 328 z³	Dodaj do notatnika	PDF		
+»
+51	9	36,19 m2	1	- m2	13 800 z³	499 422 z³	Dodaj do notatnika	PDF		
+»
+52	9	57,77 m2	3	- m2	12 500 z³	722 125 z³	Dodaj do notatnika	PDF		
+»
+53	9	46,43 m2	2	- m2	13 800 z³	640 734 z³	Zarezerwowane	PDF		
+»
+56	10	75,84 m2	3	- m2	12 500 z³	948 000 z³	Dodaj do notatnika	PDF		
+»
+57	10	36,19 m2	1	- m2	14 100 z³	510 279 z³	Dodaj do notatnika	PDF		
+»
+58	10	57,77 m2	3	- m2	12 800 z³	739 456 z³	Dodaj do notatnika	PDF		
+»
+59	10	46,43 m2	2	- m2	14 100 z³	654 663 z³	Zarezerwowane	PDF		
+»
+62	0	75,17 m2	3	- m2	11 000 z³	826 870 z³	Dodaj do notatnika	PDF		
+»
+63	0	28,05 m2	1	- m2	12 800 z³	359 040 z³	Zarezerwowane	PDF		
+»
+64	0	42,43 m2	2	- m2	12 100 z³	513 403 z³	Dodaj do notatnika	PDF		
+»
+65	0	44,77 m2	2	- m2	12 100 z³	541 717 z³	Dodaj do notatnika	PDF		
+»
+66	0	34,58 m2	1	- m2	12 500 z³	432 250 z³	Dodaj do notatnika	PDF		
+»
+68	1	28,05 m2	1	- m2	12 800 z³	359 040 z³	Dodaj do notatnika	PDF		
+»
+70	1	57,77 m2	3	- m2	12 100 z³	699 017 z³	Dodaj do notatnika	PDF		
+»
+71	1	35,88 m2	1	- m2	12 600 z³	452 088 z³	Dodaj do notatnika	PDF		
+»
+72	1	46,30 m2	1	- m2	11 000 z³	509 300 z³	Dodaj do notatnika	PDF		
+»
+77	2	35,88 m2	1	- m2	12 600 z³	452 088 z³	Dodaj do notatnika	PDF		
+»
+78	2	76,31 m2	3	- m2	11 900 z³	908 089 z³	Dodaj do notatnika	PDF
+»
+80	3	28,06 m2	1	- m2	12 800 z³	359 168 z³	Dodaj do notatnika	PDF		
+»
+83	3	35,88 m2	1	- m2	12 600 z³	452 088 z³	Dodaj do notatnika	PDF		
+»
+84	3	81,06 m2	3	- m2	11 000 z³	891 660 z³	Dodaj do notatnika	PDF		
+»
+88	4	57,77 m2	3	- m2	12 300 z³	710 571 z³	Zarezerwowane	PDF		
+»
+89	4	35,88 m2	1	- m2	12 800 z³	459 264 z³	Dodaj do notatnika	PDF		
+»
+90	4	81,06 m2	3	- m2	11 200 z³	907 872 z³	Dodaj do notatnika	PDF		
+»
+91	5	74,37 m2	3	- m2	11 400 z³	847 818 z³	Zarezerwowane	PDF		
+»
+95	5	35,88 m2	1	- m2	12 800 z³	459 264 z³	Dodaj do notatnika	PDF		
+»
+96	5	81,06 m2	3	- m2	11 200 z³	907 872 z³	Dodaj do notatnika	PDF		
+»
+97	6	74,37 m2	3	- m2	11 600 z³	862 692 z³	Dodaj do notatnika	PDF		
+»
+99	6	46,93 m2	2	- m2	12 500 z³	586 625 z³	Zarezerwowane	PDF		
+»
+101	6	35,88 m2	1	- m2	13 000 z³	466 440 z³	Dodaj do notatnika	PDF		
+»
+102	6	81,06 m2	3	- m2	11 100 z³	899 766 z³	Dodaj do notatnika	PDF		
+»
+107	7	35,88 m2	1	- m2	13 100 z³	470 028 z³	Dodaj do notatnika	PDF		
+»
+108	7	81,06 m2	3	- m2	11 500 z³	932 190 z³	Dodaj do notatnika	PDF		
+»
+109	8	74,37 m2	3	- m2	11 800 z³	877 566 z³	Zarezerwowane	PDF		
+»
+110	8	32,77 m2	1	- m2	13 300 z³	435 841 z³	Zarezerwowane	PDF		
+»
+113	8	35,88 m2	1	- m2	13 300 z³	477 204 z³	Dodaj do notatnika	PDF		
+»
+114	8	81,06 m2	3	- m2	11 700 z³	948 402 z³	Dodaj do notatnika	PDF		
+»
+115	9	74,37 m2	3	- m2	12 500 z³	929 625 z³	Dodaj do notatnika	PDF		
+»
+118	9	57,77 m2	3	- m2	13 300 z³	768 341 z³	Zarezerwowane	PDF		
+»
+119	9	35,88 m2	1	- m2	13 800 z³	495 144 z³	Dodaj do notatnika	PDF		
+»
+120	9	81,06 m2	3	- m2	12 500 z³	1 013 250 z³	Dodaj do notatnika	PDF		
+»
+121	10	74,37 m2	3	- m2	12 800 z³	951 936 z³	Zarezerwowane	PDF		
+»
+122	10	32,77 m2	1	- m2	15 300 z³	501 381 z³	Dodaj do notatnika	PDF		
+»
+123	10	46,93 m2	2	- m2	15 300 z³	718 029 z³	Dodaj do notatnika	PDF		
+»
+124	10	57,77 m2	3	- m2	14 300 z³	826 111 z³	Dodaj do notatnika	PDF		
+»
+125	10	35,88 m2	1	- m2	15 300 z³	548 964 z³	Dodaj do notatnika	PDF		
+»
+126	10	81,06 m2	3	- m2	12 800 z³	1 037 568 z³	Dodaj do notatnika	PDF		
+»
