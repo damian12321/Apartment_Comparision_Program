@@ -1,4 +1,6 @@
 import java.io.*;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.*;
 
 public class ApartmentComparator {
@@ -11,9 +13,15 @@ public class ApartmentComparator {
     private int maxApartmentNumber;
     private Map<Integer, String> differencesInApartments;
 
-    public ApartmentComparator(File firstFileName, File secondFileName) {
+    public ApartmentComparator(File firstFileName, File secondFileName) { //Comparing two files with values
         this.firstFileName = firstFileName;
         this.secondFileName = secondFileName;
+    }
+
+    public ApartmentComparator(File firstFileName) //Compare values from disc to online values
+    {
+        this.firstFileName = firstFileName;
+        this.secondFileName = createFile();
     }
 
     public void compare(File destinationFile) {
@@ -51,16 +59,16 @@ public class ApartmentComparator {
                     String[] apartmentsInfo = trimArray(modifiedString.split("\t"));
                     int number = Integer.parseInt(apartmentsInfo[0]);
                     int level = Integer.parseInt(apartmentsInfo[1]);
-                    double dimension = Double.parseDouble(apartmentsInfo[2]);
+                    double surface = Double.parseDouble(apartmentsInfo[2]);
                     int numberOfRooms = Integer.parseInt(apartmentsInfo[3]);
                     int priceForM2 = Integer.parseInt(apartmentsInfo[5]);
                     int totalprice = Integer.parseInt(apartmentsInfo[6]);
                     boolean availability = apartmentsInfo[7].equals("Zarezerwowane");
-                    Apartment apartment = new Apartment(number, level, dimension, numberOfRooms, priceForM2, totalprice, availability);
+                    Apartment apartment = new Apartment(number, level, surface, numberOfRooms, priceForM2, totalprice, availability);
                     apartmentsList.add(apartment);
-                }catch (Exception e)
-                {
+                } catch (Exception e) {
                     System.out.println("Incorrect data type from source");
+                    System.exit(1);
                 }
             }
 
@@ -145,11 +153,11 @@ public class ApartmentComparator {
 
     private String findDifferences(Apartment apartment1, Apartment apartment2) {
         StringBuilder sb = new StringBuilder();
-        if (apartment1.getDimension() != apartment2.getDimension()) {
-            sb.append("Dimension changed from ");
-            sb.append(apartment1.getDimension());
+        if (apartment1.getSurface() != apartment2.getSurface()) {
+            sb.append("Surface changed from ");
+            sb.append(apartment1.getSurface());
             sb.append(" to ");
-            sb.append(apartment2.getDimension());
+            sb.append(apartment2.getSurface());
             sb.append(".");
         }
         if (apartment1.getPricePerSquare() != apartment2.getPricePerSquare()) {
@@ -175,22 +183,56 @@ public class ApartmentComparator {
         }
         if (apartment1.isAvailability() != apartment2.isAvailability()) {
             sb.append("Availability changed from ");
-            if(apartment1.isAvailability()){
+            if (apartment1.isAvailability()) {
                 sb.append("Available");
-            }else
-            {
+            } else {
                 sb.append("Reserved");
             }
             sb.append(" to ");
-            if(apartment2.isAvailability()){
+            if (apartment2.isAvailability()) {
                 sb.append("Available");
-            }else
-            {
+            } else {
                 sb.append("Reserved");
             }
             sb.append(".");
         }
         return sb.toString();
+    }
+
+    private File createFile() { //Create file from url
+        File file = new File("onlineVersion.html");
+        try {
+            URL url = new URL("https://grzegorzkipark.pl/grzegorzki-park-budynek-8");
+            URLConnection urlConnection = url.openConnection();
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
+            String inputLine;
+            boolean write=false;
+            while ((inputLine = bufferedReader.readLine()) != null){
+                if(inputLine.contains("<table class=\"tbl-apartments sticky\">"))
+                {
+                    write=true;
+                }
+                if(write)
+                {
+                    bufferedWriter.write(inputLine);
+                }
+                if(inputLine.contains("</table>"))
+                {
+                    write=false;
+                }
+            }
+
+            bufferedReader.close();
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return file;
+    }
+    private File createXmlFile()
+    {
+        return null;
     }
 
     private void saveToFile(Map<Integer, String> map, File destionationFile) {

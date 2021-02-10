@@ -3,16 +3,16 @@ import java.util.Objects;
 public class Apartment {
     private int number;
     private int level;
-    private double dimension;
+    private double surface;
     private int numberOfRooms;
     private int pricePerSquare;
     private int totalprice;
     private boolean availability;
 
-    public Apartment(int number, int level, double dimension, int numberOfRooms, int pricePerSquare, int totalprice, boolean availability) {
+    public Apartment(int number, int level, double surface, int numberOfRooms, int pricePerSquare, int totalprice, boolean availability) {
         this.number = number;
         this.level = level;
-        this.dimension = dimension;
+        this.surface = surface;
         this.numberOfRooms = numberOfRooms;
         this.pricePerSquare = pricePerSquare;
         this.totalprice = totalprice;
@@ -26,7 +26,7 @@ public class Apartment {
         Apartment apartment = (Apartment) o;
         return number == apartment.number &&
                 level == apartment.level &&
-                Double.compare(apartment.dimension, dimension) == 0 &&
+                Double.compare(apartment.surface, surface) == 0 &&
                 numberOfRooms == apartment.numberOfRooms &&
                 pricePerSquare == apartment.pricePerSquare &&
                 totalprice == apartment.totalprice &&
@@ -35,13 +35,13 @@ public class Apartment {
 
     @Override
     public int hashCode() {
-        return Objects.hash(number, level, dimension, numberOfRooms, pricePerSquare, totalprice, availability);
+        return Objects.hash(number, level, surface, numberOfRooms, pricePerSquare, totalprice, availability);
     }
 
     @Override
     public String toString() {
-        String pattern = "Apartment Number = %3d \t Level = %2d \t Dimension = %.2f \t Number of Rooms = %d \t Price per square = %6d zł \t Total Price = %d zł \t Reserved = %s";
-        return String.format(pattern, number, level, dimension, numberOfRooms, pricePerSquare, totalprice, availability);
+        String pattern = "Apartment Number = %3d \t Level = %2d \t Surface = %.2f \t Number of Rooms = %d \t Price per square = %6d zł \t Total Price = %d zł \t Reserved = %s";
+        return String.format(pattern, number, level, surface, numberOfRooms, pricePerSquare, totalprice, availability);
     }
 
     public int getNumber() {
@@ -52,8 +52,8 @@ public class Apartment {
         return level;
     }
 
-    public double getDimension() {
-        return dimension;
+    public double getSurface() {
+        return surface;
     }
 
     public int getNumberOfRooms() {
