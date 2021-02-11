@@ -40,7 +40,7 @@ public class Apartment {
 
     @Override
     public String toString() {
-        String pattern = "Apartment Number = %3d \t Level = %2d \t Surface = %.2f \t Number of Rooms = %d \t Price per square = %6d zł \t Total Price = %d zł \t Reserved = %s";
+        String pattern = "Apartment Number = %3d \t Level = %2d \t Surface = %.2f m2 \t Number of Rooms = %d \t Price per square = %6d zł \t Total Price = %d zł \t Reserved = %s";
         return String.format(pattern, number, level, surface, numberOfRooms, pricePerSquare, totalprice, availability);
     }
 

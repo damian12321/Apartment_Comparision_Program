@@ -1,0 +1,100 @@
+Apartment number 1:Surface changed from 52.33 to 52.25.Price per square changed from 9500 to 9800.Total price changed from 497135 to 512050.
+Apartment number 2:Price per square changed from 12300 to 12600.Total price changed from 445137 to 455994.
+Apartment number 3:Price per square changed from 11300 to 11600.Total price changed from 652801 to 670132.
+Apartment number 4:Price per square changed from 11300 to 11600.Total price changed from 607036 to 623152.
+Apartment number 5:Price per square changed from 11300 to 11600.Total price changed from 642857 to 659924.
+Apartment number 6:Price per square changed from 10900 to 11200.Total price changed from 698690 to 717920.
+Apartment number 7:Price per square changed from 11300 to 11600.Total price changed from 602290 to 618280.
+Apartment number 8:Price per square changed from 11000 to 11300.Total price changed from 834240 to 856992.Availability changed from Available to Reserved.
+Apartment number 9:Price per square changed from 12500 to 12800.Total price changed from 452375 to 463232.
+Apartment number 11:The apartment has been released.
+Apartment number 12:The apartment has been bought.
+Apartment number 13:Price per square changed from 13400 to 13700.Total price changed from 1000712 to 1023116.
+Apartment number 14:Price per square changed from 10600 to 10900.Total price changed from 803904 to 826656.
+Apartment number 15:Price per square changed from 12500 to 12800.Total price changed from 452375 to 463232.Availability changed from Reserved to Available.
+Apartment number 16:The apartment has been bought.
+Apartment number 18:Price per square changed from 12500 to 12800.Total price changed from 452875 to 463744.
+Apartment number 19:The apartment has been bought.
+Apartment number 20:Price per square changed from 10900 to 11200.Total price changed from 826656 to 849408.
+Apartment number 21:Price per square changed from 12700 to 13000.Total price changed from 459613 to 470470.
+Apartment number 23:Price per square changed from 12700 to 13000.Total price changed from 592709 to 606710.
+Apartment number 25:The apartment has been bought.
+Apartment number 26:Price per square changed from 10900 to 11200.Total price changed from 826656 to 849408.
+Apartment number 28:Price per square changed from 11500 to 11800.Total price changed from 664355 to 681686.
+Apartment number 29:The apartment has been bought.
+Apartment number 30:The apartment has been bought.
+Apartment number 31:The apartment has been bought.
+Apartment number 32:Price per square changed from 10900 to 11200.Total price changed from 826656 to 849408.
+Apartment number 33:Price per square changed from 12900 to 13200.Total price changed from 466851 to 477708.
+Apartment number 34:The apartment has been released.
+Apartment number 35:The apartment has been bought.
+Apartment number 36:The apartment has been bought.
+Apartment number 37:The apartment has been bought.
+Apartment number 38:Price per square changed from 11200 to 11500.Total price changed from 849408 to 872160.
+Apartment number 39:Price per square changed from 13100 to 13400.Total price changed from 474089 to 484946.
+Apartment number 40:The apartment has been released.
+Apartment number 41:Price per square changed from 13100 to 13400.Total price changed from 611377 to 625378.
+Apartment number 42:The apartment has been bought.
+Apartment number 44:Price per square changed from 11200 to 11500.Total price changed from 849408 to 872160.
+Apartment number 45:Price per square changed from 13300 to 13600.Total price changed from 481327 to 492184.
+Apartment number 46:Price per square changed from 12100 to 12400.Total price changed from 699017 to 716348.
+Apartment number 47:The apartment has been released.
+Apartment number 48:Price per square changed from 13300 to 13600.Total price changed from 481859 to 492728.Availability changed from Available to Reserved.
+Apartment number 49:The apartment has been bought.
+Apartment number 50:Price per square changed from 11400 to 11700.Total price changed from 864576 to 887328.
+Apartment number 51:Price per square changed from 13500 to 13800.Total price changed from 488565 to 499422.
+Apartment number 52:Price per square changed from 12200 to 12500.Total price changed from 704794 to 722125.
+Apartment number 53:The apartment has been released.
+Apartment number 56:Price per square changed from 12200 to 12500.Total price changed from 925248 to 948000.
+Apartment number 57:Price per square changed from 13800 to 14100.Total price changed from 499422 to 510279.
+Apartment number 58:Price per square changed from 12500 to 12800.Total price changed from 722125 to 739456.
+Apartment number 59:The apartment has been released.
+Apartment number 62:Surface changed from 75.16 to 75.17.Price per square changed from 10700 to 11000.Total price changed from 804212 to 826870.
+Apartment number 63:Price per square changed from 12500 to 12800.Total price changed from 350625 to 359040.Availability changed from Reserved to Available.
+Apartment number 64:Price per square changed from 11800 to 12100.Total price changed from 500674 to 513403.
+Apartment number 65:Price per square changed from 11800 to 12100.Total price changed from 528286 to 541717.
+Apartment number 66:Price per square changed from 12200 to 12500.Total price changed from 421876 to 432250.Availability changed from Available to Reserved.
+Apartment number 67:The apartment has been bought.
+Apartment number 68:Price per square changed from 12500 to 12800.Total price changed from 350625 to 359040.
+Apartment number 70:Price per square changed from 11800 to 12100.Total price changed from 681686 to 699017.
+Apartment number 71:Price per square changed from 12300 to 12600.Total price changed from 441324 to 452088.
+Apartment number 72:Surface changed from 46.36 to 46.3.Price per square changed from 10700 to 11000.Total price changed from 496052 to 509300.
+Apartment number 73:The apartment has been bought.
+Apartment number 76:The apartment has been bought.
+Apartment number 77:Price per square changed from 12300 to 12600.Total price changed from 441324 to 452088.
+Apartment number 78:Surface changed from 68.99 to 76.31.Price per square changed from 11600 to 11900.Total price changed from 800284 to 908089.
+Apartment number 79:The apartment has been bought.
+Apartment number 80:The apartment has been released.
+Apartment number 83:Price per square changed from 12300 to 12600.Total price changed from 441324 to 452088.
+Apartment number 84:Surface changed from 70.79 to 81.06.Price per square changed from 10700 to 11000.Total price changed from 757453 to 891660.
+Apartment number 87:The apartment has been bought.
+Apartment number 88:The apartment has been released.
+Apartment number 89:Price per square changed from 12500 to 12800.Total price changed from 448500 to 459264.
+Apartment number 90:Surface changed from 70.79 to 81.06.Price per square changed from 10900 to 11200.Total price changed from 771611 to 907872.
+Apartment number 91:Price per square changed from 11100 to 11400.Total price changed from 825507 to 847818.Availability changed from Reserved to Available.
+Apartment number 95:Price per square changed from 12500 to 12800.Total price changed from 448500 to 459264.
+Apartment number 96:Surface changed from 70.79 to 81.06.Price per square changed from 10900 to 11200.Total price changed from 771611 to 907872.
+Apartment number 97:Price per square changed from 11300 to 11600.Total price changed from 840381 to 862692.
+Apartment number 99:Price per square changed from 12200 to 12500.Total price changed from 572546 to 586625.
+Apartment number 101:Price per square changed from 12700 to 13000.Total price changed from 455676 to 466440.
+Apartment number 102:Surface changed from 70.79 to 81.06.Total price changed from 785769 to 899766.
+Apartment number 104:The apartment has been bought.
+Apartment number 107:Price per square changed from 12800 to 13100.Total price changed from 459264 to 470028.
+Apartment number 108:Surface changed from 70.79 to 81.06.Price per square changed from 11200 to 11500.Total price changed from 792848 to 932190.Availability changed from Available to Reserved.
+Apartment number 109:Price per square changed from 11500 to 11800.Total price changed from 855255 to 877566.Availability changed from Reserved to Available.
+Apartment number 110:The apartment has been released.
+Apartment number 111:The apartment has been bought.
+Apartment number 113:Price per square changed from 13000 to 13300.Total price changed from 466440 to 477204.
+Apartment number 114:Surface changed from 70.79 to 81.06.Price per square changed from 11400 to 11700.Total price changed from 807006 to 948402.
+Apartment number 115:Price per square changed from 12200 to 12500.Total price changed from 907314 to 929625.
+Apartment number 116:The apartment has been bought.
+Apartment number 117:The apartment has been bought.
+Apartment number 118:Price per square changed from 13000 to 13300.Total price changed from 751010 to 768341.
+Apartment number 119:Price per square changed from 13500 to 13800.Total price changed from 484380 to 495144.
+Apartment number 120:Surface changed from 70.0 to 81.06.Price per square changed from 12338 to 12500.Total price changed from 863638 to 1013250.
+Apartment number 121:Price per square changed from 12500 to 12800.Total price changed from 929625 to 951936.Availability changed from Reserved to Available.
+Apartment number 122:Price per square changed from 15000 to 15300.Total price changed from 491550 to 501381.Availability changed from Available to Reserved.
+Apartment number 123:Price per square changed from 15000 to 15300.Total price changed from 703950 to 718029.Availability changed from Available to Reserved.
+Apartment number 124:Price per square changed from 14000 to 14300.Total price changed from 808780 to 826111.Availability changed from Available to Reserved.
+Apartment number 125:Price per square changed from 15000 to 15300.Total price changed from 538200 to 548964.
+Apartment number 126:Surface changed from 70.79 to 81.06.Price per square changed from 12500 to 12800.Total price changed from 884875 to 1037568.

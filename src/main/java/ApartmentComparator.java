@@ -2,6 +2,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import javax.swing.*;
 import java.io.*;
 import java.math.BigDecimal;
 import java.util.*;
@@ -12,17 +13,19 @@ public class ApartmentComparator {
     private List<String> list2;
     private int mode = 0;//0-comparing two files,1-comparing first file to online table
 
-    public ApartmentComparator(File firstFileName, File secondFileName) { //Comparing two files with values
+    public ApartmentComparator(File firstFileName, File secondFileName,File destinationFile) { //Comparing two files with values
         this.firstFileName = firstFileName;
         this.secondFileName = secondFileName;
         this.mode = 0;
+        compare(destinationFile);
     }
 
-    public ApartmentComparator(File firstFileName) //Compare values from disc to online values
+    public ApartmentComparator(File firstFileName,File destinationFile) //Compare values from disc to online values
     {
         this.firstFileName = firstFileName;
         this.mode = 1;
         getDataFromUrl();
+        compare(destinationFile);
     }
 
     public void compare(File destinationFile) {
@@ -252,6 +255,11 @@ public class ApartmentComparator {
 
 
     private void saveToFile(Map<Integer, String> map, File destionationFile) {
+
+        if(!destionationFile.getAbsolutePath().endsWith(".txt"))
+        {
+            destionationFile=new File(destionationFile.getAbsolutePath()+".txt");
+        }
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(destionationFile))) {
             for (Map.Entry<Integer, String> tempMap : map.entrySet()) {
                 bufferedWriter.write("Apartment number " + tempMap.getKey() + ":");
