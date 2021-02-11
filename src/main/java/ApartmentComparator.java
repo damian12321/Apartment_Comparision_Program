@@ -1,33 +1,38 @@
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+
 import java.io.*;
-import java.net.URL;
-import java.net.URLConnection;
+import java.math.BigDecimal;
 import java.util.*;
 
 public class ApartmentComparator {
     private File firstFileName;
     private File secondFileName;
-    private List<String> list1;
-    private List<Apartment> oldApartmentsList;
     private List<String> list2;
-    private List<Apartment> newApartmentsList;
-    private int maxApartmentNumber;
-    private Map<Integer, String> differencesInApartments;
+    private int mode = 0;//0-comparing two files,1-comparing first file to online table
 
     public ApartmentComparator(File firstFileName, File secondFileName) { //Comparing two files with values
         this.firstFileName = firstFileName;
         this.secondFileName = secondFileName;
+        this.mode = 0;
     }
 
     public ApartmentComparator(File firstFileName) //Compare values from disc to online values
     {
         this.firstFileName = firstFileName;
-        this.secondFileName = createFile();
+        this.mode = 1;
+        getDataFromUrl();
     }
 
     public void compare(File destinationFile) {
         List<String> list1 = getAllLinesFromFile(firstFileName);
         List<Apartment> oldApartmentsList = getApartmentsFromList(list1);
-        List<String> list2 = getAllLinesFromFile(secondFileName);
+        if (mode == 0) {
+            list2 = getAllLinesFromFile(secondFileName);
+        } else {
+            list2 = getDataFromUrl();
+        }
         List<Apartment> newApartmentsList = getApartmentsFromList(list2);
         int maxApartmentNumber = findMaxApartmentNumber(oldApartmentsList, newApartmentsList);
         Map<Integer, String> differencesInApartments = compareApartments(oldApartmentsList, newApartmentsList, maxApartmentNumber);
@@ -61,12 +66,13 @@ public class ApartmentComparator {
                     int level = Integer.parseInt(apartmentsInfo[1]);
                     double surface = Double.parseDouble(apartmentsInfo[2]);
                     int numberOfRooms = Integer.parseInt(apartmentsInfo[3]);
-                    int priceForM2 = Integer.parseInt(apartmentsInfo[5]);
-                    int totalprice = Integer.parseInt(apartmentsInfo[6]);
+                    int priceForM2 = Integer.parseInt(apartmentsInfo[5].replace(" ", ""));
+                    int totalprice = Integer.parseInt(apartmentsInfo[6].replace(" ", ""));
                     boolean availability = apartmentsInfo[7].equals("Zarezerwowane");
                     Apartment apartment = new Apartment(number, level, surface, numberOfRooms, priceForM2, totalprice, availability);
                     apartmentsList.add(apartment);
                 } catch (Exception e) {
+
                     System.out.println("Incorrect data type from source");
                     System.exit(1);
                 }
@@ -91,8 +97,10 @@ public class ApartmentComparator {
     private String modifyString(String string) {
         String[][] replacements = {{",", "."},
                 {"m2", ""},
+                {"z�", ""},
                 {" ", ""},
-                {"z�", ""}
+                {"-", ""},
+                {"zł", ""}
         };
         String strOutput = string;
         for (String[] replacement : replacements) {
@@ -199,41 +207,49 @@ public class ApartmentComparator {
         return sb.toString();
     }
 
-    private File createFile() { //Create file from url
-        File file = new File("onlineVersion.html");
+    private List<String> getDataFromUrl() { //Create file from url
+        String url = "https://grzegorzkipark.pl/grzegorzki-park-budynek-8";
+        List<String> tempList = new ArrayList<>();
+
         try {
-            URL url = new URL("https://grzegorzkipark.pl/grzegorzki-park-budynek-8");
-            URLConnection urlConnection = url.openConnection();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
-            String inputLine;
-            boolean write=false;
-            while ((inputLine = bufferedReader.readLine()) != null){
-                if(inputLine.contains("<table class=\"tbl-apartments sticky\">"))
-                {
-                    write=true;
+            Document document = Jsoup.connect(url).get();
+            int i = 0;
+            for (Element row : document.select("table.tbl-apartments.sticky tr")) {
+                if (i == 0) {//skip first line
+                    i++;
+                    continue;
                 }
-                if(write)
-                {
-                    bufferedWriter.write(inputLine);
-                }
-                if(inputLine.contains("</table>"))
-                {
-                    write=false;
+                if (!row.select("td.nr").text().equals("")) {
+                    StringBuilder sb = new StringBuilder();
+                    String number = row.select("td.nr").text();
+                    String level = row.select("td.floor").text();
+                    String surface = row.select("td.surface").text();
+                    String numberOfRooms = row.select("td.rooms").text();
+                    String balcony = row.select("td.balcony").text();
+                    String pricePerSquare = row.select("td.price").text().split("zł")[0];
+                    String totalprice = row.select("td.price").text().split("zł")[1];
+                    String reserved = row.select("td.notepad").text();
+                    sb.append(number + "\t");
+                    sb.append(level + "\t");
+                    sb.append(surface + "\t");
+                    sb.append(numberOfRooms + "\t");
+                    sb.append(balcony + "\t");
+                    sb.append(pricePerSquare + "\t");
+                    sb.append(totalprice + "\t");
+                    if (!reserved.equals("")) {
+                        sb.append(reserved + "\t");
+                    } else {
+                        sb.append("Dodaj do notatnika\t");
+                    }
+                    tempList.add(sb.toString());
                 }
             }
-
-            bufferedReader.close();
-            bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return file;
+        return tempList;
     }
-    private File createXmlFile()
-    {
-        return null;
-    }
+
 
     private void saveToFile(Map<Integer, String> map, File destionationFile) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(destionationFile))) {
