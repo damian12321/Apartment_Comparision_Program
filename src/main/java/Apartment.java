@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Apartment {
+public class Apartment implements Comparable<Apartment>{
     private int number;
     private int level;
     private double surface;
@@ -70,6 +70,11 @@ public class Apartment {
 
     public boolean isAvailability() {
         return availability;
+    }
+
+    @Override
+    public int compareTo(Apartment o) {
+        return this.getNumber()-o.getNumber();
     }
 }
 

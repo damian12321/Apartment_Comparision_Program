@@ -10,20 +10,23 @@ import java.util.*;
 public class ApartmentComparator {
     private File firstFileName;
     private File secondFileName;
-    private List<String> list2;
-    private int mode = 0;//0-comparing two files,1-comparing first file to online table
+    private boolean comparisionCompleted;
+    private List<Apartment> newApartmentsList;
+    private int mode = 0;//0-comparing two files,1-comparing first file to online values from table
 
     public ApartmentComparator(File firstFileName, File secondFileName,File destinationFile) { //Comparing two files with values
         this.firstFileName = firstFileName;
         this.secondFileName = secondFileName;
         this.mode = 0;
+        this.comparisionCompleted=false;
         compare(destinationFile);
     }
 
-    public ApartmentComparator(File firstFileName,File destinationFile) //Compare values from disc to online values
+    public ApartmentComparator(File firstFileName,File destinationFile) //Compare values from disk to online values
     {
         this.firstFileName = firstFileName;
         this.mode = 1;
+        this.comparisionCompleted=false;
         getDataFromUrl();
         compare(destinationFile);
     }
@@ -31,12 +34,13 @@ public class ApartmentComparator {
     public void compare(File destinationFile) {
         List<String> list1 = getAllLinesFromFile(firstFileName);
         List<Apartment> oldApartmentsList = getApartmentsFromList(list1);
+        List<String> list2;
         if (mode == 0) {
             list2 = getAllLinesFromFile(secondFileName);
         } else {
             list2 = getDataFromUrl();
         }
-        List<Apartment> newApartmentsList = getApartmentsFromList(list2);
+        newApartmentsList = getApartmentsFromList(list2);
         int maxApartmentNumber = findMaxApartmentNumber(oldApartmentsList, newApartmentsList);
         Map<Integer, String> differencesInApartments = compareApartments(oldApartmentsList, newApartmentsList, maxApartmentNumber);
         saveToFile(differencesInApartments, destinationFile);
@@ -253,6 +257,13 @@ public class ApartmentComparator {
         return tempList;
     }
 
+    public boolean isComparisionCompleted() {
+        return comparisionCompleted;
+    }
+
+    public List<Apartment> getNewApartmentsList() {
+        return newApartmentsList;
+    }
 
     private void saveToFile(Map<Integer, String> map, File destionationFile) {
 
@@ -270,6 +281,7 @@ public class ApartmentComparator {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        comparisionCompleted=true;
     }
 }
 
