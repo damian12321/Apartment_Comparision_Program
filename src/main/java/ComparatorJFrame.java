@@ -38,6 +38,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
     private JTextField file1PathText;
     private JTextField file2PathText;
     private JTextField outputPathText;
+    private boolean wasSubmitted=false;
 
 
     public ComparatorJFrame() {
@@ -45,7 +46,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         this.setLayout(null);
         this.setTitle("Apartment Comparator");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(new Dimension(1000, 800));
+        this.setSize(new Dimension(930, 730));
         Dimension objDimension = Toolkit.getDefaultToolkit().getScreenSize();
         int iCoordX = (objDimension.width - this.getWidth()) / 2;
         int iCoordY = (objDimension.height - this.getHeight()) / 2;
@@ -85,7 +86,6 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         optionLabel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 60));
         optionLabel.setBackground(COLOR);
         optionLabel.setOpaque(true);
-        optionLabel.setBorder(BorderFactory.createLineBorder(SystemColor.cyan, 1));//TO DELETE
         String pathToIcon = null;
         try {
             pathToIcon = new File(".").getCanonicalPath();
@@ -128,7 +128,6 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         oneFileLabel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 60));
         oneFileLabel.setBackground(COLOR);
         oneFileLabel.setOpaque(true);
-        oneFileLabel.setBorder(BorderFactory.createLineBorder(SystemColor.cyan, 1));//TO DELETE
         oneFileLabel.setVisible(false);
         oneFileLabel.setVerticalAlignment(SwingConstants.TOP);
         oneFileLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -150,7 +149,6 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         twoFilesLabel.setBounds(new Rectangle(10, 210, 400, 100));
         twoFilesLabel.setLayout(new FlowLayout(FlowLayout.RIGHT, 40, 70));
         twoFilesLabel.setOpaque(true);
-        twoFilesLabel.setBorder(BorderFactory.createLineBorder(SystemColor.cyan, 1));//TO DELETE
         twoFilesLabel.setBackground(COLOR);
         twoFilesLabel.setVisible(false);
         twoFilesLabel.setVerticalAlignment(SwingConstants.TOP);
@@ -174,7 +172,6 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         saveFileLabel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 70));
         saveFileLabel.setBackground(COLOR);
         saveFileLabel.setOpaque(true);
-        saveFileLabel.setBorder(BorderFactory.createLineBorder(SystemColor.cyan, 1));//TO DELETE
         saveFileLabel.setVisible(false);
         saveFileLabel.setVerticalAlignment(SwingConstants.TOP);
         saveFileLabel.setHorizontalAlignment(SwingConstants.LEFT);
@@ -223,7 +220,6 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         textLabel1.setLayout(new FlowLayout(FlowLayout.RIGHT, 00, 5));
         textLabel1.setBackground(COLOR);
         textLabel1.setOpaque(true);
-        textLabel1.setBorder(BorderFactory.createLineBorder(SystemColor.cyan, 1));//TO DELETE
         textLabel1.setVisible(false);
         textLabel1.setVerticalAlignment(SwingConstants.TOP);
         textLabel1.setHorizontalAlignment(SwingConstants.LEFT);
@@ -237,7 +233,6 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         textLabel2.setLayout(new FlowLayout(FlowLayout.RIGHT, 00, 5));
         textLabel2.setBackground(COLOR);
         textLabel2.setOpaque(true);
-        textLabel2.setBorder(BorderFactory.createLineBorder(SystemColor.cyan, 1));//TO DELETE
         textLabel2.setVisible(false);
         textLabel2.setVerticalAlignment(SwingConstants.TOP);
         textLabel2.setHorizontalAlignment(SwingConstants.LEFT);
@@ -251,7 +246,6 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         textLabel3.setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 5));
         textLabel3.setBackground(COLOR);
         textLabel3.setOpaque(true);
-        textLabel3.setBorder(BorderFactory.createLineBorder(SystemColor.cyan, 1));//TO DELETE
         textLabel3.setVisible(false);
         textLabel3.setVerticalAlignment(SwingConstants.TOP);
         textLabel3.setHorizontalAlignment(SwingConstants.LEFT);
@@ -265,7 +259,6 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         completedLabel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 60));
         completedLabel.setBackground(COLOR);
         completedLabel.setOpaque(true);
-        completedLabel.setBorder(BorderFactory.createLineBorder(SystemColor.cyan, 1));//TO DELETE
         completedLabel.setVisible(false);
         completedLabel.setVerticalAlignment(SwingConstants.TOP);
         completedLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -288,7 +281,6 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         apartmentChooserLabel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 60));
         apartmentChooserLabel.setBackground(COLOR);
         apartmentChooserLabel.setOpaque(true);
-        apartmentChooserLabel.setBorder(BorderFactory.createLineBorder(SystemColor.cyan, 1));//TO DELETE
         apartmentChooserLabel.setVisible(false);
         apartmentChooserLabel.setVerticalAlignment(SwingConstants.TOP);
         apartmentChooserLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -309,11 +301,10 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         tableLabel = new JLabel();
         tableLabel.setFont(new Font("INK Free", Font.BOLD, 20));
         tableLabel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
-        tableLabel.setBounds(new Rectangle(400, 310, 600, 450));
+        tableLabel.setBounds(new Rectangle(370, 240, 600, 450));
         tableLabel.setLayout(new FlowLayout());
         tableLabel.setBackground(COLOR);
         tableLabel.setOpaque(true);
-        tableLabel.setBorder(BorderFactory.createLineBorder(SystemColor.cyan, 1));//TO DELETE
         tableLabel.setVisible(true);
         tableLabel.setVerticalAlignment(SwingConstants.CENTER);
         tableLabel.setHorizontalAlignment(SwingConstants.LEFT);
@@ -372,6 +363,13 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         tableLabel.add(panel);
 
     }
+    private void reset()
+    {
+          completedLabel.setVisible(false);
+          tableLabel.setVisible(false);
+          apartmentChooserLabel.setVisible(false);
+          saveSubmitButton.setVisible(false);
+    }
 
 
     @Override
@@ -383,6 +381,10 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
             textLabel1.setVisible(true);
             textLabel2.setVisible(false);
             textLabel3.setVisible(true);
+            if(wasSubmitted) {
+                wasSubmitted = false;
+                reset();
+            }
 
         }
         if (e.getSource() == twoFilesButton) {
@@ -392,6 +394,10 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
             textLabel1.setVisible(true);
             textLabel2.setVisible(true);
             textLabel3.setVisible(true);
+            if(wasSubmitted) {
+                wasSubmitted = false;
+                reset();
+            }
         }
         if (e.getSource() == readFileButton1) {
             JFileChooser fileChooser = new JFileChooser();
@@ -442,6 +448,9 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         }
         if (file1 != null && file2 != null && outputFile != null && twoFilesLabel.isVisible()) {
             saveSubmitButton.setVisible(true);
+        }else
+        {
+            saveSubmitButton.setVisible(false);
         }
         if (file1 != null && oneFileLabel.isVisible() && outputFile != null) {
             saveSubmitButton.setVisible(true);
@@ -453,6 +462,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
                 apartmentComparator = new ApartmentComparator(file1, outputFile);
             }
             if (apartmentComparator.isComparisionCompleted()) {
+                wasSubmitted=true;
                 initTableLabel();
                 initApartmentChooserLabel();
                 completedLabel.setVisible(true);
