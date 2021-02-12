@@ -38,7 +38,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
     private JTextField file1PathText;
     private JTextField file2PathText;
     private JTextField outputPathText;
-    private boolean wasSubmitted=false;
+    private boolean wasSubmitted = false;
 
 
     public ComparatorJFrame() {
@@ -271,8 +271,8 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         ImageIcon imageIcon = new ImageIcon(pathToIcon + "\\src\\main\\resources\\finished.png");
         completedLabel.setIcon(imageIcon);
     }
-    private void initApartmentChooserLabel()
-    {
+
+    private void initApartmentChooserLabel() {
         apartmentChooserLabel = new JLabel("<html>The apartments are listed in the table below.<br/>If you want to see more details, please select:</html>");
         apartmentChooserLabel.setFont(new Font("INK Free", Font.BOLD, 20));
         apartmentChooserLabel.setHorizontalTextPosition(SwingConstants.CENTER);
@@ -284,10 +284,9 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         apartmentChooserLabel.setVisible(false);
         apartmentChooserLabel.setVerticalAlignment(SwingConstants.TOP);
         apartmentChooserLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        jComboBox=new JComboBox();
+        jComboBox = new JComboBox();
         jComboBox.addActionListener(this);
-        for(Apartment apartment:apartmentComparator.getNewApartmentsList())
-        {
+        for (Apartment apartment : apartmentComparator.getNewApartmentsList()) {
             jComboBox.addItem(apartment.getNumber());
         }
         openSubmitButton = new JButton("Submit");
@@ -363,12 +362,12 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         tableLabel.add(panel);
 
     }
-    private void reset()
-    {
-          completedLabel.setVisible(false);
-          tableLabel.setVisible(false);
-          apartmentChooserLabel.setVisible(false);
-          saveSubmitButton.setVisible(false);
+
+    private void reset() {
+        completedLabel.setVisible(false);
+        tableLabel.setVisible(false);
+        apartmentChooserLabel.setVisible(false);
+        saveSubmitButton.setVisible(false);
     }
 
 
@@ -381,7 +380,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
             textLabel1.setVisible(true);
             textLabel2.setVisible(false);
             textLabel3.setVisible(true);
-            if(wasSubmitted) {
+            if (wasSubmitted) {
                 wasSubmitted = false;
                 reset();
             }
@@ -394,7 +393,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
             textLabel1.setVisible(true);
             textLabel2.setVisible(true);
             textLabel3.setVisible(true);
-            if(wasSubmitted) {
+            if (wasSubmitted) {
                 wasSubmitted = false;
                 reset();
             }
@@ -448,8 +447,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         }
         if (file1 != null && file2 != null && outputFile != null && twoFilesLabel.isVisible()) {
             saveSubmitButton.setVisible(true);
-        }else
-        {
+        } else {
             saveSubmitButton.setVisible(false);
         }
         if (file1 != null && oneFileLabel.isVisible() && outputFile != null) {
@@ -462,7 +460,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
                 apartmentComparator = new ApartmentComparator(file1, outputFile);
             }
             if (apartmentComparator.isComparisionCompleted()) {
-                wasSubmitted=true;
+                wasSubmitted = true;
                 initTableLabel();
                 initApartmentChooserLabel();
                 completedLabel.setVisible(true);
@@ -473,11 +471,11 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
             }
         }
         if (e.getSource() == openSubmitButton) {
-            int index=jComboBox.getSelectedIndex();
-            Apartment apartment=apartmentComparator.getNewApartmentsList().get(index);
+            int index = jComboBox.getSelectedIndex();
+            Apartment apartment = apartmentComparator.getNewApartmentsList().get(index);
             new InformationJFrame(apartment);
         }
-        }
     }
+}
 
 

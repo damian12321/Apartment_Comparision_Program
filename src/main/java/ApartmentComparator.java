@@ -2,9 +2,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import javax.swing.*;
 import java.io.*;
-import java.math.BigDecimal;
 import java.util.*;
 
 public class ApartmentComparator {
@@ -14,19 +12,19 @@ public class ApartmentComparator {
     private List<Apartment> newApartmentsList;
     private int mode = 0;//0-comparing two files,1-comparing first file to online values from table
 
-    public ApartmentComparator(File firstFileName, File secondFileName,File destinationFile) { //Comparing two files with values
+    public ApartmentComparator(File firstFileName, File secondFileName, File destinationFile) { //Comparing two files with values
         this.firstFileName = firstFileName;
         this.secondFileName = secondFileName;
         this.mode = 0;
-        this.comparisionCompleted=false;
+        this.comparisionCompleted = false;
         compare(destinationFile);
     }
 
-    public ApartmentComparator(File firstFileName,File destinationFile) //Compare values from disk to online values
+    public ApartmentComparator(File firstFileName, File destinationFile) //Compare values from disk to online values
     {
         this.firstFileName = firstFileName;
         this.mode = 1;
-        this.comparisionCompleted=false;
+        this.comparisionCompleted = false;
         getDataFromUrl();
         compare(destinationFile);
     }
@@ -267,9 +265,8 @@ public class ApartmentComparator {
 
     private void saveToFile(Map<Integer, String> map, File destionationFile) {
 
-        if(!destionationFile.getAbsolutePath().endsWith(".txt"))
-        {
-            destionationFile=new File(destionationFile.getAbsolutePath()+".txt");
+        if (!destionationFile.getAbsolutePath().endsWith(".txt")) {
+            destionationFile = new File(destionationFile.getAbsolutePath() + ".txt");
         }
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(destionationFile))) {
             for (Map.Entry<Integer, String> tempMap : map.entrySet()) {
@@ -281,7 +278,7 @@ public class ApartmentComparator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        comparisionCompleted=true;
+        comparisionCompleted = true;
     }
 }
 

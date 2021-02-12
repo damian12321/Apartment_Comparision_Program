@@ -4,6 +4,6 @@ import java.io.*;
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
-    ComparatorJFrame comparatorJFrame=new ComparatorJFrame();
+    new ComparatorJFrame();
     }
 }
