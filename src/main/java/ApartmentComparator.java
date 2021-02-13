@@ -11,13 +11,22 @@ public class ApartmentComparator {
     private boolean comparisionCompleted;
     private List<Apartment> newApartmentsList;
     private int mode = 0;//0-comparing two files,1-comparing first file to online values from table
+    private static final ApartmentComparator INSTANCE = new ApartmentComparator();
+
+    private ApartmentComparator()//only for testing
+    {
+    }
+
+    public static ApartmentComparator getINSTANCE() {//only for testing
+        return INSTANCE;
+    }
 
     public ApartmentComparator(File firstFileName, File secondFileName, File destinationFile) { //Comparing two files with values
         this.firstFileName = firstFileName;
         this.secondFileName = secondFileName;
         this.mode = 0;
         this.comparisionCompleted = false;
-        compare(destinationFile);
+        initProcess(destinationFile);
     }
 
     public ApartmentComparator(File firstFileName, File destinationFile) //Compare values from disk to online values
@@ -25,23 +34,23 @@ public class ApartmentComparator {
         this.firstFileName = firstFileName;
         this.mode = 1;
         this.comparisionCompleted = false;
-        getDataFromUrl();
-        compare(destinationFile);
+        getTableDataFromUrl();
+        initProcess(destinationFile);
     }
 
-    public void compare(File destinationFile) {
-        List<String> list1 = getAllLinesFromFile(firstFileName);
-        List<Apartment> oldApartmentsList = getApartmentsFromList(list1);
+    private void initProcess(File destinationFile) {
+        List<String> list1 = getAllLinesFromFile(firstFileName);//read all lines
+        List<Apartment> oldApartmentsList = getApartmentsFromList(list1);//get apartments from read lines
         List<String> list2;
-        if (mode == 0) {
+        if (mode == 0) {//depending on mode, read all lines
             list2 = getAllLinesFromFile(secondFileName);
         } else {
-            list2 = getDataFromUrl();
+            list2 = getTableDataFromUrl();
         }
-        newApartmentsList = getApartmentsFromList(list2);
-        int maxApartmentNumber = findMaxApartmentNumber(oldApartmentsList, newApartmentsList);
-        Map<Integer, String> differencesInApartments = compareApartments(oldApartmentsList, newApartmentsList, maxApartmentNumber);
-        saveToFile(differencesInApartments, destinationFile);
+        newApartmentsList = getApartmentsFromList(list2);//get apartments from read lines
+        int maxApartmentNumber = findMaxApartmentNumber(oldApartmentsList, newApartmentsList);//get max apartment number
+        Map<Integer, String> differencesInApartments = compareApartments(oldApartmentsList, newApartmentsList, maxApartmentNumber);//find differences
+        saveToFile(differencesInApartments, destinationFile);//save to file(destionationFile)
     }
 
 
@@ -212,7 +221,7 @@ public class ApartmentComparator {
         return sb.toString();
     }
 
-    private List<String> getDataFromUrl() { //Create file from url
+    private List<String> getTableDataFromUrl() { //Create file from url
         String url = "https://grzegorzkipark.pl/grzegorzki-park-budynek-8";
         List<String> tempList = new ArrayList<>();
 
