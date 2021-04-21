@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="91289940-e46e-4ff4-9edb-e03a3c76b21b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Apartment_Comparator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/apartment_comparator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ApartmentComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ApartmentComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Apartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/apartment_comparator/Apartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ApartmentComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/apartment_comparator/ApartmentComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ComparatorJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/apartment_comparator/ComparatorJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InformationJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/apartment_comparator/InformationJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/differences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/differences.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ApartmentComparatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ApartmentComparatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ApartmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ApartmentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/ApartmentComparator.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/differences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/differences.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/ApartmentComparator.kotlin_module" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,19 +37,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" selection-start-column="17" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -67,13 +73,6 @@
       </list>
     </option>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
@@ -95,6 +94,7 @@
     <option name="width" value="1932" />
     <option name="height" value="1040" />
   </component>
+  <component name="ProjectId" id="1rTsiAqGO1wPhpiKXrqpFGLoa0S" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -154,40 +154,67 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/pl/apartment_comparator" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Damian69\Desktop\projekty\ApartmentComparator\Apartment_Comparator\src\main\java\pl\apartment_comparator" />
+      <recent name="C:\Users\Damian69\Desktop\projekty\ApartmentComparator\Apartment_Comparator\src\test\java" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
       <recent name="groovy.util.GroovyTestCase" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.ApartmentComparatorTest.modifyString">
-    <configuration name="ApartmentComparatorTest.getAllLinesFromFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ApartmentComparator" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.apartment_comparator.Main" />
+      <module name="Apartment_Comparator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApartmentComparatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Apartment_Comparator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ApartmentComparatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApartmentComparatorTest.getAllLinesFromFile (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Apartment_Comparator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ApartmentComparatorTest" />
       <option name="METHOD_NAME" value="getAllLinesFromFile" />
@@ -207,7 +234,7 @@
       </method>
     </configuration>
     <configuration name="ApartmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ApartmentComparator" />
+      <module name="Apartment_Comparator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ApartmentTest" />
       <option name="TEST_OBJECT" value="class" />
@@ -215,36 +242,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApartmentTest.equals1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ApartmentComparator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ApartmentTest" />
-      <option name="METHOD_NAME" value="equals1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestingClassTest.process" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ApartmentComparator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestingClassTest" />
-      <option name="METHOD_NAME" value="process" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApartmentComparatorTest.modifyString" />
-        <item itemvalue="JUnit.ApartmentComparatorTest.getAllLinesFromFile" />
-        <item itemvalue="JUnit.TestingClassTest.process" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ApartmentTest" />
-        <item itemvalue="JUnit.ApartmentTest.equals1" />
+        <item itemvalue="JUnit.ApartmentComparatorTest" />
+        <item itemvalue="JUnit.ApartmentComparatorTest.getAllLinesFromFile (1)" />
+        <item itemvalue="JUnit.ApartmentComparatorTest.modifyString" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -255,6 +263,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613039571995</updated>
+      <workItem from="1619011540167" duration="8848000" />
     </task>
     <servers />
   </component>
@@ -321,6 +330,20 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -1,3 +1,5 @@
+package pl.apartment_comparator;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;

@@ -1,23 +1,23 @@
 import org.junit.jupiter.api.Test;
+import pl.apartment_comparator.ApartmentComparator;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.nio.file.NoSuchFileException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ApartmentComparatorTest {
     @Test
-    void getAllLinesFromFile() throws NoSuchFileException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, IOException //Testing private method
+    void getAllLinesFromFile() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, IOException //Testing private method
     {
         Method method = ApartmentComparator.class.getDeclaredMethod("getAllLinesFromFile", File.class);
         method.setAccessible(true);
-        String pathToIcon = new File(".").getCanonicalPath();
-        File file = new File(pathToIcon + "\\src\\test\\java\\test.txt");
+        String pathToFile = new File(".").getCanonicalPath();
+        File file = new File(pathToFile + "\\src\\test\\java\\test.txt");
         ApartmentComparator apartmentComparator = ApartmentComparator.getINSTANCE();
         List<String> getList = (List<String>) method.invoke(apartmentComparator, file);
         List<String> testList = new ArrayList<>();
@@ -33,8 +33,8 @@ class ApartmentComparatorTest {
         Method method = ApartmentComparator.class.getDeclaredMethod("modifyString", String.class);
         ApartmentComparator apartmentComparator = ApartmentComparator.getINSTANCE();
         method.setAccessible(true);
-        String tekst = "1zł,m2,-m2--";
-        assertEquals("1..", method.invoke(apartmentComparator, tekst));
+        String text = "1zł,m2,-m2--";
+        assertEquals("1..", method.invoke(apartmentComparator, text));
     }
 
 

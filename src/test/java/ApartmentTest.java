@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
+import pl.apartment_comparator.Apartment;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

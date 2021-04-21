@@ -1,3 +1,5 @@
+package pl.apartment_comparator;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
@@ -7,7 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
+import java.net.URL;
 import java.util.Collections;
 
 public class ComparatorJFrame extends JFrame implements ActionListener {
@@ -86,13 +88,11 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         optionLabel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 60));
         optionLabel.setBackground(COLOR);
         optionLabel.setOpaque(true);
-        String pathToIcon = null;
-        try {
-            pathToIcon = new File(".").getCanonicalPath();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        ImageIcon jLabelImageIcon = new ImageIcon(pathToIcon + "\\src\\main\\resources\\choose.png");
+
+        URL imageURL = getClass().getClassLoader().getResource("choose.png");
+        Image image = Toolkit.getDefaultToolkit().getImage(imageURL);
+        ImageIcon jLabelImageIcon = new ImageIcon(image);
+
         optionLabel.setIcon(jLabelImageIcon);
         optionLabel.setVerticalAlignment(SwingConstants.TOP);
         optionLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -132,13 +132,9 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         oneFileLabel.setVerticalAlignment(SwingConstants.TOP);
         oneFileLabel.setHorizontalAlignment(SwingConstants.CENTER);
         oneFileLabel.add(readFileButton1);
-        String pathToIcon = null;
-        try {
-            pathToIcon = new File(".").getCanonicalPath();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        ImageIcon imageIcon = new ImageIcon(pathToIcon + "\\src\\main\\resources\\folder.png");
+        URL imageURL = getClass().getClassLoader().getResource("folder.png");
+        Image image = Toolkit.getDefaultToolkit().getImage(imageURL);
+        ImageIcon imageIcon = new ImageIcon(image);
         oneFileLabel.setIcon(imageIcon);
 
     }
@@ -155,13 +151,9 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         twoFilesLabel.setHorizontalAlignment(SwingConstants.CENTER);
         twoFilesLabel.add(readFileButton2);
         twoFilesLabel.add(readFileButton3);
-        String pathToIcon = null;
-        try {
-            pathToIcon = new File(".").getCanonicalPath();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        ImageIcon imageIcon = new ImageIcon(pathToIcon + "\\src\\main\\resources\\folder.png");
+        URL imageURL = getClass().getClassLoader().getResource("folder.png");
+        Image image = Toolkit.getDefaultToolkit().getImage(imageURL);
+        ImageIcon imageIcon = new ImageIcon(image);
         twoFilesLabel.setIcon(imageIcon);
     }
 
@@ -177,13 +169,9 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         saveFileLabel.setHorizontalAlignment(SwingConstants.LEFT);
         saveFileLabel.add(saveFile);
         saveFileLabel.add(saveSubmitButton);
-        String pathToIcon = null;
-        try {
-            pathToIcon = new File(".").getCanonicalPath();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        ImageIcon imageIcon = new ImageIcon(pathToIcon + "\\src\\main\\resources\\save.png");
+        URL imageURL = getClass().getClassLoader().getResource("save.png");
+        Image image = Toolkit.getDefaultToolkit().getImage(imageURL);
+        ImageIcon imageIcon = new ImageIcon(image);
         saveFileLabel.setIcon(imageIcon);
     }
 
@@ -217,7 +205,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         textLabel1 = new JLabel("Path to file 1: ");
         textLabel1.setFont(new Font("INK Free", Font.BOLD, 20));
         textLabel1.setBounds(new Rectangle(10, 310, 400, 50));
-        textLabel1.setLayout(new FlowLayout(FlowLayout.RIGHT, 00, 5));
+        textLabel1.setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 5));
         textLabel1.setBackground(COLOR);
         textLabel1.setOpaque(true);
         textLabel1.setVisible(false);
@@ -230,7 +218,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         textLabel2 = new JLabel("Path to file 2: ");
         textLabel2.setFont(new Font("INK Free", Font.BOLD, 20));
         textLabel2.setBounds(new Rectangle(10, 360, 400, 50));
-        textLabel2.setLayout(new FlowLayout(FlowLayout.RIGHT, 00, 5));
+        textLabel2.setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 5));
         textLabel2.setBackground(COLOR);
         textLabel2.setOpaque(true);
         textLabel2.setVisible(false);
@@ -253,7 +241,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
     }
 
     private void initComparisionCompletedLabel() {
-        completedLabel = new JLabel("Comparision completed");
+        completedLabel = new JLabel("Comparison completed");
         completedLabel.setFont(new Font("INK Free", Font.BOLD, 20));
         completedLabel.setBounds(new Rectangle(10, 560, 400, 150));
         completedLabel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 60));
@@ -262,13 +250,9 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         completedLabel.setVisible(false);
         completedLabel.setVerticalAlignment(SwingConstants.TOP);
         completedLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        String pathToIcon = null;
-        try {
-            pathToIcon = new File(".").getCanonicalPath();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        ImageIcon imageIcon = new ImageIcon(pathToIcon + "\\src\\main\\resources\\finished.png");
+        URL imageURL = getClass().getClassLoader().getResource("finished.png");
+        Image image = Toolkit.getDefaultToolkit().getImage(imageURL);
+        ImageIcon imageIcon = new ImageIcon(image);
         completedLabel.setIcon(imageIcon);
     }
 
@@ -337,7 +321,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
                         data[i][j] = apartmentComparator.getNewApartmentsList().get(i).getPricePerSquare();
                         break;
                     case 5:
-                        data[i][j] = apartmentComparator.getNewApartmentsList().get(i).getTotalprice();
+                        data[i][j] = apartmentComparator.getNewApartmentsList().get(i).getTotalPrice();
                         break;
                     case 6:
                         data[i][j] = apartmentComparator.getNewApartmentsList().get(i).isAvailability();
@@ -459,7 +443,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
             } else {
                 apartmentComparator = new ApartmentComparator(file1, outputFile);
             }
-            if (apartmentComparator.isComparisionCompleted()) {
+            if (apartmentComparator.isComparisonCompleted()) {
                 wasSubmitted = true;
                 initTableLabel();
                 initApartmentChooserLabel();

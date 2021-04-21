@@ -1,3 +1,5 @@
+package pl.apartment_comparator;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -8,7 +10,7 @@ import java.util.*;
 public class ApartmentComparator {
     private File firstFileName;
     private File secondFileName;
-    private boolean comparisionCompleted;
+    private boolean comparisonCompleted;
     private List<Apartment> newApartmentsList;
     private int mode = 0;//0-comparing two files,1-comparing first file to online values from table
     private static final ApartmentComparator INSTANCE = new ApartmentComparator();
@@ -25,7 +27,7 @@ public class ApartmentComparator {
         this.firstFileName = firstFileName;
         this.secondFileName = secondFileName;
         this.mode = 0;
-        this.comparisionCompleted = false;
+        this.comparisonCompleted = false;
         initProcess(destinationFile);
     }
 
@@ -33,7 +35,7 @@ public class ApartmentComparator {
     {
         this.firstFileName = firstFileName;
         this.mode = 1;
-        this.comparisionCompleted = false;
+        this.comparisonCompleted = false;
         getTableDataFromUrl();
         initProcess(destinationFile);
     }
@@ -50,7 +52,7 @@ public class ApartmentComparator {
         newApartmentsList = getApartmentsFromList(list2);//get apartments from read lines
         int maxApartmentNumber = findMaxApartmentNumber(oldApartmentsList, newApartmentsList);//get max apartment number
         Map<Integer, String> differencesInApartments = compareApartments(oldApartmentsList, newApartmentsList, maxApartmentNumber);//find differences
-        saveToFile(differencesInApartments, destinationFile);//save to file(destionationFile)
+        saveToFile(differencesInApartments, destinationFile);//save to file(destinationFile)
     }
 
 
@@ -81,9 +83,9 @@ public class ApartmentComparator {
                     double surface = Double.parseDouble(apartmentsInfo[2]);
                     int numberOfRooms = Integer.parseInt(apartmentsInfo[3]);
                     int priceForM2 = Integer.parseInt(apartmentsInfo[5].replace(" ", ""));
-                    int totalprice = Integer.parseInt(apartmentsInfo[6].replace(" ", ""));
+                    int totalPrice = Integer.parseInt(apartmentsInfo[6].replace(" ", ""));
                     boolean availability = apartmentsInfo[7].equals("Zarezerwowane");
-                    Apartment apartment = new Apartment(number, level, surface, numberOfRooms, priceForM2, totalprice, availability);
+                    Apartment apartment = new Apartment(number, level, surface, numberOfRooms, priceForM2, totalPrice, availability);
                     apartmentsList.add(apartment);
                 } catch (Exception e) {
 
@@ -189,11 +191,11 @@ public class ApartmentComparator {
             sb.append(apartment2.getPricePerSquare());
             sb.append(".");
         }
-        if (apartment1.getTotalprice() != apartment2.getTotalprice()) {
+        if (apartment1.getTotalPrice() != apartment2.getTotalPrice()) {
             sb.append("Total price changed from ");
-            sb.append(apartment1.getTotalprice());
+            sb.append(apartment1.getTotalPrice());
             sb.append(" to ");
-            sb.append(apartment2.getTotalprice());
+            sb.append(apartment2.getTotalPrice());
             sb.append(".");
         }
         if (apartment1.getNumberOfRooms() != apartment2.getNumberOfRooms()) {
@@ -264,20 +266,20 @@ public class ApartmentComparator {
         return tempList;
     }
 
-    public boolean isComparisionCompleted() {
-        return comparisionCompleted;
+    public boolean isComparisonCompleted() {
+        return comparisonCompleted;
     }
 
     public List<Apartment> getNewApartmentsList() {
         return newApartmentsList;
     }
 
-    private void saveToFile(Map<Integer, String> map, File destionationFile) {
+    private void saveToFile(Map<Integer, String> map, File destinationFile) {
 
-        if (!destionationFile.getAbsolutePath().endsWith(".txt")) {
-            destionationFile = new File(destionationFile.getAbsolutePath() + ".txt");
+        if (!destinationFile.getAbsolutePath().endsWith(".txt")) {
+            destinationFile = new File(destinationFile.getAbsolutePath() + ".txt");
         }
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(destionationFile))) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(destinationFile))) {
             for (Map.Entry<Integer, String> tempMap : map.entrySet()) {
                 bufferedWriter.write("Apartment number " + tempMap.getKey() + ":");
                 bufferedWriter.write(tempMap.getValue());
@@ -287,7 +289,7 @@ public class ApartmentComparator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        comparisionCompleted = true;
+        comparisonCompleted = true;
     }
 }
 

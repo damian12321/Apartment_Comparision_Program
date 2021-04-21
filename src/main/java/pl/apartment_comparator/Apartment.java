@@ -1,3 +1,5 @@
+package pl.apartment_comparator;
+
 import java.util.Objects;
 
 public class Apartment implements Comparable<Apartment> {
@@ -6,16 +8,16 @@ public class Apartment implements Comparable<Apartment> {
     private double surface;
     private int numberOfRooms;
     private int pricePerSquare;
-    private int totalprice;
+    private int totalPrice;
     private boolean availability;
 
-    public Apartment(int number, int level, double surface, int numberOfRooms, int pricePerSquare, int totalprice, boolean availability) {
+    public Apartment(int number, int level, double surface, int numberOfRooms, int pricePerSquare, int totalPrice, boolean availability) {
         this.number = number;
         this.level = level;
         this.surface = surface;
         this.numberOfRooms = numberOfRooms;
         this.pricePerSquare = pricePerSquare;
-        this.totalprice = totalprice;
+        this.totalPrice = totalPrice;
         this.availability = availability;
     }
 
@@ -29,19 +31,19 @@ public class Apartment implements Comparable<Apartment> {
                 Double.compare(apartment.surface, surface) == 0 &&
                 numberOfRooms == apartment.numberOfRooms &&
                 pricePerSquare == apartment.pricePerSquare &&
-                totalprice == apartment.totalprice &&
+                totalPrice == apartment.totalPrice &&
                 availability == apartment.availability;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(number, level, surface, numberOfRooms, pricePerSquare, totalprice, availability);
+        return Objects.hash(number, level, surface, numberOfRooms, pricePerSquare, totalPrice, availability);
     }
 
     @Override
     public String toString() {
         String pattern = "Apartment Number = %3d \t Level = %2d \t Surface = %.2f m2 \t Number of Rooms = %d \t Price per square = %6d zł \t Total Price = %d zł \t Reserved = %s";
-        return String.format(pattern, number, level, surface, numberOfRooms, pricePerSquare, totalprice, availability);
+        return String.format(pattern, number, level, surface, numberOfRooms, pricePerSquare, totalPrice, availability);
     }
 
     public int getNumber() {
@@ -64,8 +66,8 @@ public class Apartment implements Comparable<Apartment> {
         return pricePerSquare;
     }
 
-    public int getTotalprice() {
-        return totalprice;
+    public int getTotalPrice() {
+        return totalPrice;
     }
 
     public boolean isAvailability() {
