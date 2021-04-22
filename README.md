@@ -1,7 +1,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Inspiration](#inspiration)
-* [Program's idea](#program's-idea)
+* [Application idea](#application-idea)
 * [Technologies](#technologies)
 * [Screenshots](#screenshots)
 * [Setup](#setup)
@@ -12,7 +12,7 @@ This project is a simple apartment comparision program.
 ## Inspiration
 The program was created for my own needs when I was looking for an apartment in a specific housing estate in Krakow.
 
-## Program's idea
+## Application idea
 The application has two modes of operation.
 
 * Compare the data from one .txt file with the data in second .txt file. 
