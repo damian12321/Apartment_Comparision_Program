@@ -16,7 +16,7 @@ The program was created for my own needs when I was looking for an apartment in 
 The application has two modes of operation.
 
 * Compare the data from one .txt file with the data in second .txt file. 
-* Compare the data from .txt file with the online values ​​in the apartments table.
+* Compare the data from .txt file with the online values in the apartments table.
 
 The program includes a simple graphical user interface.
 The result of the program is a .txt file that contains information about any changes in individual apartments, such as price, availability and surface.
@@ -28,8 +28,8 @@ Project is created with:
 * JUnit 5
 
 ## Screenshots
-![Screen1](./img/screen1.png)
-![Screen2](./img/screen2.png)
+![Screen1](./img/Screen1.png)
+![Screen2](./img/Screen2.png)
 
 ## Setup
 Clone the repo from github:
