@@ -6,7 +6,7 @@
 * [Setup](#setup)
 
 ## General info
-This project is simple apartment comparision program.
+This project is a simple apartment comparision program.
 	
 ## Inspiration
 The program was created for my own needs when I was looking for an apartment in a specific housing estate in Krakow.
