@@ -24,7 +24,7 @@ The result of the program is a .txt file that contains information about any cha
 ## Technologies
 Project is created with:
 * Java 8
-* Maven
+* Maven 3
 * JUnit 5
 
 ## Screenshots
