@@ -1,7 +1,7 @@
 ## Table of contents
 * [General info](#general-info)
-* [Inspiration] (#inspiration)
-* [Program's idea] (#program's-idea)
+* [Inspiration](#inspiration)
+* [Program's idea](#program's-idea)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
