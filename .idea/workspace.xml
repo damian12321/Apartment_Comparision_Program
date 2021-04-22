@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91289940-e46e-4ff4-9edb-e03a3c76b21b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/differences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/differences.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/differences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/differences.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="91289940-e46e-4ff4-9edb-e03a3c76b21b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,7 +229,7 @@
       <updated>1613039571995</updated>
       <workItem from="1619011540167" duration="9658000" />
       <workItem from="1619086245136" duration="2963000" />
-      <workItem from="1619090923889" duration="711000" />
+      <workItem from="1619090923889" duration="1310000" />
     </task>
     <servers />
   </component>

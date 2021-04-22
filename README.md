@@ -3,6 +3,7 @@
 * [Inspiration](#inspiration)
 * [Program's idea](#program's-idea)
 * [Technologies](#technologies)
+* [Screenshots](#screenshots)
 * [Setup](#setup)
 
 ## General info
@@ -26,15 +27,22 @@ Project is created with:
 * Maven
 * JUnit 5
 
+## Screenshots
+![Screen1](./img/screen1.png)
+![Screen2](./img/screen2.png)
+
 ## Setup
 Clone the repo from github:
 
 git clone https://github.com/damian12321/Apartment_Comparision_Program
 
-You can run the application on your favourite IDE by running src/main/java/pl/apartment comparator/Main.main
+You can run the application on your favourite IDE by running src/main/java/pl/apartment_comparator/Main.main
 or by command line in the application root folder.
 
 ```
 $ mvn clean compile assembly:single
 $ java -jar target/ApartmentComparator-1.0.0-jar-with-dependencies.jar
 ```
+
+An example files that can be used to test the program are located in src/main/resources.
+An example result file can be found in src/main/resources/differences.txt.
