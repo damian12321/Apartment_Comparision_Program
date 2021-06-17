@@ -23,9 +23,8 @@ The result of the program is a .txt file that contains information about any cha
 
 ## Technologies
 Project is created with:
-* Java 8
-* Maven 3
-* JUnit 5
+* Java
+* Maven
 
 ## Screenshots
 ![Screen1](./img/Screen1.png)
@@ -33,9 +32,9 @@ Project is created with:
 
 ## Setup
 Clone the repo from github:
-
-git clone https://github.com/damian12321/Apartment_Comparision_Program
-
+```
+$ git clone https://github.com/damian12321/Apartment_Comparision_Program
+```
 You can run the application on your favourite IDE by running src/main/java/pl/apartment_comparator/Main.main
 or by command line in the application root folder.
 

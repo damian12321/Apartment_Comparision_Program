@@ -230,7 +230,7 @@ public class ApartmentComparator {
         try {
             Document document = Jsoup.connect(url).get();
             int i = 0;
-            for (Element row : document.select("table.tbl-apartments.sticky tr")) {
+            for (Element row : document.select("table.tbl-apartments.sticky tr")) { //get data from table
                 if (i == 0) {//skip first line
                     i++;
                     continue;

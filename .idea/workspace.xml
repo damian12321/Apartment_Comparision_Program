@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91289940-e46e-4ff4-9edb-e03a3c76b21b" name="Default Changelist" comment="" />
+    <list default="true" id="91289940-e46e-4ff4-9edb-e03a3c76b21b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/differences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/differences.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/differences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/differences.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -141,7 +145,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../spring_bank" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -162,8 +166,23 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="pl.apartment_comparator.Main" />
-      <module name="Apartment_Comparator" />
+      <module name="Apartment_Comparision_Program" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.apartment_comparator.Test" />
+      <module name="Apartment_Comparision_Program" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.apartment_comparator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,16 +206,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApartmentComparatorTest.modifyString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ApartmentComparator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ApartmentComparatorTest" />
-      <option name="METHOD_NAME" value="modifyString" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ApartmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Apartment_Comparator" />
       <option name="PACKAGE_NAME" value="" />
@@ -209,10 +218,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.ApartmentTest" />
         <item itemvalue="JUnit.ApartmentComparatorTest" />
         <item itemvalue="JUnit.ApartmentComparatorTest.getAllLinesFromFile (1)" />
-        <item itemvalue="JUnit.ApartmentComparatorTest.modifyString" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +238,14 @@
       <updated>1613039571995</updated>
       <workItem from="1619011540167" duration="9658000" />
       <workItem from="1619086245136" duration="2963000" />
-      <workItem from="1619090923889" duration="1310000" />
+      <workItem from="1619090923889" duration="1935000" />
+      <workItem from="1619097720013" duration="708000" />
+      <workItem from="1619108837007" duration="453000" />
+      <workItem from="1619127344889" duration="164000" />
+      <workItem from="1620233956289" duration="83000" />
+      <workItem from="1620407044578" duration="932000" />
+      <workItem from="1621607996149" duration="239000" />
+      <workItem from="1621608295291" duration="4000" />
     </task>
     <servers />
   </component>
