@@ -3,13 +3,13 @@ package pl.apartment_comparator;
 import java.util.Objects;
 
 public class Apartment implements Comparable<Apartment> {
-    private int number;
-    private int level;
-    private double surface;
-    private int numberOfRooms;
-    private int pricePerSquare;
-    private int totalPrice;
-    private boolean availability;
+    private final int number;
+    private final int level;
+    private final double surface;
+    private final int numberOfRooms;
+    private final int pricePerSquare;
+    private final int totalPrice;
+    private final boolean availability;
 
     public Apartment(int number, int level, double surface, int numberOfRooms, int pricePerSquare, int totalPrice, boolean availability) {
         this.number = number;

@@ -70,7 +70,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         initTextLabel1();
         initTextLabel2();
         initTextLabel3();
-        initComparisionCompletedLabel();
+        initComparisonCompletedLabel();
         jFrame.add(optionLabel);
         jFrame.add(oneFileLabel);
         jFrame.add(twoFilesLabel);
@@ -201,10 +201,7 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         outputPathText.setEditable(false);
     }
 
-    private void initTextLabel1() {
-        textLabel1 = new JLabel("Path to file 1: ");
-        textLabel1.setFont(new Font("INK Free", Font.BOLD, 20));
-        textLabel1.setBounds(new Rectangle(10, 310, 400, 50));
+    private void setTextLabelProperties(JLabel textLabel1, JTextField file1PathText) {
         textLabel1.setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 5));
         textLabel1.setBackground(COLOR);
         textLabel1.setOpaque(true);
@@ -214,33 +211,29 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
         textLabel1.add(file1PathText);
     }
 
+    private void initTextLabel1() {
+        textLabel1 = new JLabel("Path to file 1: ");
+        textLabel1.setFont(new Font("INK Free", Font.BOLD, 20));
+        textLabel1.setBounds(new Rectangle(10, 310, 400, 50));
+        setTextLabelProperties(textLabel1, file1PathText);
+    }
+
+
     private void initTextLabel2() {
         textLabel2 = new JLabel("Path to file 2: ");
         textLabel2.setFont(new Font("INK Free", Font.BOLD, 20));
         textLabel2.setBounds(new Rectangle(10, 360, 400, 50));
-        textLabel2.setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 5));
-        textLabel2.setBackground(COLOR);
-        textLabel2.setOpaque(true);
-        textLabel2.setVisible(false);
-        textLabel2.setVerticalAlignment(SwingConstants.TOP);
-        textLabel2.setHorizontalAlignment(SwingConstants.LEFT);
-        textLabel2.add(file2PathText);
+        setTextLabelProperties(textLabel2, file2PathText);
     }
 
     private void initTextLabel3() {
         textLabel3 = new JLabel("Output path: ");
         textLabel3.setFont(new Font("INK Free", Font.BOLD, 20));
         textLabel3.setBounds(new Rectangle(10, 510, 400, 50));
-        textLabel3.setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 5));
-        textLabel3.setBackground(COLOR);
-        textLabel3.setOpaque(true);
-        textLabel3.setVisible(false);
-        textLabel3.setVerticalAlignment(SwingConstants.TOP);
-        textLabel3.setHorizontalAlignment(SwingConstants.LEFT);
-        textLabel3.add(outputPathText);
+        setTextLabelProperties(textLabel3, outputPathText);
     }
 
-    private void initComparisionCompletedLabel() {
+    private void initComparisonCompletedLabel() {
         completedLabel = new JLabel("Comparison completed");
         completedLabel.setFont(new Font("INK Free", Font.BOLD, 20));
         completedLabel.setBounds(new Rectangle(10, 560, 400, 150));
@@ -383,57 +376,21 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
             }
         }
         if (e.getSource() == readFileButton1) {
-            JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setCurrentDirectory(new File("."));
-            FileNameExtensionFilter filter = new FileNameExtensionFilter(".txt", "txt", "text");
-            fileChooser.setFileFilter(filter);
-            int response = fileChooser.showOpenDialog(null);
-            if (response == 0) {
-                file1 = new File(fileChooser.getSelectedFile().getAbsolutePath());
-                file1PathText.setText(file1.getAbsolutePath());
-                file1PathText.repaint();
-            }
+            setPathValueToTextField(1, file1PathText);
+
         }
         if (e.getSource() == readFileButton2) {
-            JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setCurrentDirectory(new File("."));
-            FileNameExtensionFilter filter = new FileNameExtensionFilter(".txt", "txt", "text");
-            fileChooser.setFileFilter(filter);
-            int response = fileChooser.showOpenDialog(null);
-            if (response == 0) {
-                file1 = new File(fileChooser.getSelectedFile().getAbsolutePath());
-                file1PathText.setText(file1.getAbsolutePath());
-                file1PathText.repaint();
-            }
+            setPathValueToTextField(1, file1PathText);
+
         }
         if (e.getSource() == readFileButton3) {
-            JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setCurrentDirectory(new File("."));
-            FileNameExtensionFilter filter = new FileNameExtensionFilter(".txt", "txt", "text");
-            fileChooser.setFileFilter(filter);
-            int response = fileChooser.showOpenDialog(null);
-            if (response == 0) {
-                file2 = new File(fileChooser.getSelectedFile().getAbsolutePath());
-                file2PathText.setText(file2.getAbsolutePath());
-                file2PathText.repaint();
-            }
+            setPathValueToTextField(2, file2PathText);
+
         }
         if (e.getSource() == saveFile) {
-            JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setCurrentDirectory(new File("."));
-            FileNameExtensionFilter filter = new FileNameExtensionFilter(".txt", "txt", "text");
-            fileChooser.setFileFilter(filter);
-            int response = fileChooser.showSaveDialog(null);
-            if (response == 0) {
-                outputFile = new File(fileChooser.getSelectedFile().getAbsolutePath());
-                outputPathText.setText(outputFile.getAbsolutePath());
-            }
+            setPathValueToTextField(3, file2PathText);
         }
-        if (file1 != null && file2 != null && outputFile != null && twoFilesLabel.isVisible()) {
-            saveSubmitButton.setVisible(true);
-        } else {
-            saveSubmitButton.setVisible(false);
-        }
+        saveSubmitButton.setVisible(file1 != null && file2 != null && outputFile != null && twoFilesLabel.isVisible());
         if (file1 != null && oneFileLabel.isVisible() && outputFile != null) {
             saveSubmitButton.setVisible(true);
         }
@@ -458,6 +415,35 @@ public class ComparatorJFrame extends JFrame implements ActionListener {
             int index = jComboBox.getSelectedIndex();
             Apartment apartment = apartmentComparator.getNewApartmentsList().get(index);
             new InformationJFrame(apartment);
+        }
+    }
+
+    private void setPathValueToTextField(int i, JTextField jTextField)//1-file1, 2-file2, 3-output
+    {
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File("."));
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(".txt", "txt", "text");
+        fileChooser.setFileFilter(filter);
+        int response = fileChooser.showOpenDialog(null);
+        if (response == 0) {
+            switch (i) {
+                case 1:
+                    file1 = new File(fileChooser.getSelectedFile().getAbsolutePath());
+                    file1PathText.setText(file1.getAbsolutePath());
+                    file1PathText.repaint();
+                    break;
+                case 2:
+                    file2 = new File(fileChooser.getSelectedFile().getAbsolutePath());
+                    file2PathText.setText(file2.getAbsolutePath());
+                    file2PathText.repaint();
+                    break;
+                case 3:
+                    outputFile = new File(fileChooser.getSelectedFile().getAbsolutePath());
+                    outputPathText.setText(outputFile.getAbsolutePath());
+                    outputPathText.repaint();
+                    break;
+            }
+
         }
     }
 }

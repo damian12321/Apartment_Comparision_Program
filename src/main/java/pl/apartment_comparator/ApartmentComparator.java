@@ -8,20 +8,11 @@ import java.io.*;
 import java.util.*;
 
 public class ApartmentComparator {
-    private File firstFileName;
+    private final File firstFileName;
     private File secondFileName;
     private boolean comparisonCompleted;
     private List<Apartment> newApartmentsList;
-    private int mode = 0;//0-comparing two files,1-comparing first file to online values from table
-    private static final ApartmentComparator INSTANCE = new ApartmentComparator();
-
-    private ApartmentComparator()//only for testing
-    {
-    }
-
-    public static ApartmentComparator getINSTANCE() {//only for testing
-        return INSTANCE;
-    }
+    private final int mode;//0-comparing two files,1-comparing first file to online values from table
 
     public ApartmentComparator(File firstFileName, File secondFileName, File destinationFile) { //Comparing two files with values
         this.firstFileName = firstFileName;
@@ -122,7 +113,6 @@ public class ApartmentComparator {
         for (String[] replacement : replacements) {
             strOutput = strOutput.replace(replacement[0], replacement[1]);
         }
-        ;
         return strOutput;
     }
 
@@ -243,20 +233,28 @@ public class ApartmentComparator {
                     String numberOfRooms = row.select("td.rooms").text();
                     String balcony = row.select("td.balcony").text();
                     String pricePerSquare = row.select("td.price").text().split("zł")[0];
-                    String totalprice = row.select("td.price").text().split("zł")[1];
+                    String totalPrice = row.select("td.price").text().split("zł")[1];
                     String reserved = row.select("td.notepad").text();
-                    sb.append(number + "\t");
-                    sb.append(level + "\t");
-                    sb.append(surface + "\t");
-                    sb.append(numberOfRooms + "\t");
-                    sb.append(balcony + "\t");
-                    sb.append(pricePerSquare + "\t");
-                    sb.append(totalprice + "\t");
+                    sb.append(number);
+                    sb.append("\t");
+                    sb.append(level);
+                    sb.append("\t");
+                    sb.append(surface);
+                    sb.append("\t");
+                    sb.append(numberOfRooms);
+                    sb.append("\t");
+                    sb.append(balcony);
+                    sb.append("\t");
+                    sb.append(pricePerSquare);
+                    sb.append("\t");
+                    sb.append(totalPrice);
+                    sb.append("\t");
                     if (!reserved.equals("")) {
-                        sb.append(reserved + "\t");
+                        sb.append(reserved);
                     } else {
-                        sb.append("Dodaj do notatnika\t");
+                        sb.append("Dodaj do notatnika");
                     }
+                    sb.append("\t");
                     tempList.add(sb.toString());
                 }
             }

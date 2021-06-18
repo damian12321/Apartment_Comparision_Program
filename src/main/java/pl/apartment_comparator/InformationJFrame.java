@@ -8,7 +8,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class InformationJFrame extends JFrame {
-    private Apartment apartment;
+    private final Apartment apartment;
     private static final int NUMBER = 4806;
 
     public InformationJFrame(Apartment apartment) {
